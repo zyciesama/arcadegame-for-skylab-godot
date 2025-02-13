@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5prek8777t77"]
+
+[ext_resource type="Texture2D" uid="uid://dpcvgb721qprj" path="res://Assets/IMG_5839.PNG" id="1_37xnk"]
+
+[node name="UILife" type="TextureRect"]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 56.0
+offset_bottom = 54.0
+texture = ExtResource("1_37xnk")
+expand_mode = 2

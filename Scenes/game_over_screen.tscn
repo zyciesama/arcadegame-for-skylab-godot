@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwugsgy16oshk"]
+
+[ext_resource type="Script" path="res://Scripts/game_over_screen.gd" id="1_ba0jj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c064l"]
+font_size = 160
+
+[sub_resource type="FontFile" id="FontFile_ht0w3"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/45/0 = Vector2(0, 0)
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
+cache/0/45/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/45/0/kerning_overrides/45/0 = Vector2(0, 0)
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ba0jj")
+
+[node name="GameOver" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 257.0
+offset_right = 1430.0
+offset_bottom = 479.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_c064l")
+
+[node name="Restart Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -38.0
+offset_right = 204.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontFile_ht0w3")
+theme_override_font_sizes/font_size = 45
+text = "TRY AGAIN"
+
+[connection signal="pressed" from="Restart Button" to="." method="_on_restart_button_pressed"]

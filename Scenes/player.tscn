@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cot1ppijol6mn"]
+
+[ext_resource type="Texture2D" uid="uid://dpcvgb721qprj" path="res://Assets/IMG_5839.PNG" id="1_8h88w"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_jg8h8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d6bxr"]
+radius = 23.5372
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgpwo"]
+size = Vector2(52, 8)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_jg8h8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_8h88w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_d6bxr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_mgpwo")
+
+[node name="Muzzle" type="Node2D" parent="."]
+position = Vector2(0, -37)
